@@ -1,0 +1,62 @@
+{% extends "layout.html" %}
+
+{% set pageId = "conteudo-site" %}
+
+
+    {% block css %}
+        <link rel="stylesheet" type="text/css" href="styles/index.css">
+    {% endblock css %}
+        
+    {% block title %}
+        <title>Loja-Vendas</title>
+    {% endblock title %}
+
+    {% block header %}
+        {% include "partials/header.html"%}
+    {% endblock header %}
+        
+
+        {% block slide %}
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    {% for produto in produtos %}
+                <div class="swiper-slide"><img src="{{produto.image}}" alt=""></div>
+                {% endfor %}
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        {% endblock slide %}
+
+        {% block conteudo %}
+            <div class="conteudo-grid">
+                {% for produto in produtos %}
+                    <div class="conteudo">
+                        <img src="{{produto.image}}" alt="">
+                        <h1>{{produto.title}}</h1>
+                        <p>{{produto.description}}</p>
+                        <div class="preco-comprar">
+                            <h2>R$ {{produto.value}}</h2>
+                            <h3>12x de R$ {{produto.value_times}}</h3>
+                            <div class="btn-comprar">
+                                <a href=""><strong>Comprar</strong></a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+         {% endblock conteudo %}
+   
+        
+    {% block scripts %}
+        <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="scripts/index.js"></script>
+    {% endblock scripts %}
+
+</body>
+</html>

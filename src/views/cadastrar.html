@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% set pageId = "container-login" %}
+
+    {% block css %}
+        <link rel="stylesheet" type="text/css" href="styles/cadastrar.css">
+    {% endblock css %}
+   
+    {% block title %}
+        <title>Loja-Vendas</title>
+    {% endblock title %}
+
+        {% block conteudo %}
+
+            <form method="POST" action="/saved">
+                <div class="elementos-login">
+                    <label>Cadastro :</label><br><br>
+                    <input type="text" name="username" placeholder=" Digite seu Email"/> 
+                    <input type="text" name="username" placeholder=" Digite seu Usuário"/>   
+                    <input type="password" name="password" placeholder=" Digite uma Senha"/>  
+                    <input type="password" name="password2" placeholder=" Confirme sua Senha"/>
+                    <button>Entrar</button> 
+                </div>  	
+            </form>
+        {% endblock conteudo %}

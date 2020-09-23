@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
+    {% block css %}
+    {% endblock css %}
+
+    {% block title %}
+        <title>Loja-Vendas</title>
+    {% endblock title %}
+    
+</head>
+<body>
+
+    <div class="{{pageId}}">
+        
+        {% block header %}
+        {% endblock header %}
+        
+        {% block slide %}
+        {% endblock slide %}
+       
+        {% block conteudo %}
+        {% endblock conteudo %}
+
+    </div>
+
+   
+    {% block modals %}
+    {% endblock modals %}
+    
+    {% block scripts %}
+    {% endblock scripts %}
+    
+
+</body>
+</html>

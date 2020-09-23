@@ -1,0 +1,95 @@
+.conteudo-site nav ul{
+    display: none;
+}
+
+.conteudo-site nav .login {
+    display: none;
+}
+
+
+.conteudo-site .input-nav{
+    display: none;
+}
+
+.conteudo-site nav a{
+    display: flex;
+    width: 100%;
+   
+}
+
+.conteudo-site nav a img{
+    width: 339px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+.conteudo-site form{
+    width: 80%;
+    border-radius: 8px;
+    background-color: var(--pretoclaro);
+    padding: 20px;
+}
+
+.conteudo-site form .field-group{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+   
+}
+
+.conteudo-site form .field-group .field{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    
+}
+
+.conteudo-site form .field-group-2{
+    margin-top: 10px;
+}
+
+.conteudo-site form .field-group .field:first-child{
+    margin: 0;
+}
+
+.conteudo-site form .field label{
+    color: var(--verde-principal);
+    margin-bottom: 2px;
+}
+
+.conteudo-site form .field input{
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+}
+
+.conteudo-site form .field-imagem{
+    margin-top: 10px;
+}
+
+.conteudo-site form .field-imagem input{
+    width: 100%;
+    margin-top: 2px;
+}
+
+.conteudo-site form .botao{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.conteudo-site form .botao button{
+    margin-top: 30px;
+    width: 50%;
+    padding: 15px;
+    background-color: var(--verde-principal);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.6s;
+}
+
+.conteudo-site form .botao button:hover{
+    background-color: var(--verde-hover);
+}

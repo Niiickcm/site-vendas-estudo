@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% set pageId = "conteudo-site" %}
+
+    {% block css %}
+        <link rel="stylesheet" type="text/css" href="styles/index.css">
+        <link rel="stylesheet" type="text/css" href="styles/cadastro-produtos.css">
+        <link rel="stylesheet" type="text/css" href="styles/modal-cadastro.css">
+    {% endblock css %}
+
+    {% block title %}
+        <title>Cadastro de produtos</title>
+    {% endblock title %}
+    
+   {% block header %}
+        {% include "partials/header.html"%}
+   {% endblock header %}
+
+   {% block conteudo %}
+        <form action="/saved" method="POST">
+                <div class="field-group">
+                    <div class="field">
+                        <label for="">Titulo:</label>
+                        <input type="text" name="title" id="title" required>
+                    </div>
+                     <div class="field">
+                        <label for="">Descrição:</label>
+                        <input type="text" name="description" id="description" required>
+                    </div>
+                </div>
+                <div class="field-group field-group-2">
+                    <div class="field">
+                        <label for="">Valor:</label>
+                        <input type="text" name="value" id="value" required>
+                    </div>
+                     <div class="field">
+                        <label for="">Valor em 12x:</label>
+                        <input type="text" name="value_times" id="value_times" required>
+                    </div>
+                </div>
+                    <div class="field field-imagem">
+                        <label for="">Imagem:</label>
+                        <input type="url" name="image" placeholder="http://" required>
+                    </div> 
+                    <div class="botao">
+                        <button>Cadastrar Produto</button>  
+                    </div>
+        </form>
+   {% endblock conteudo %}
+
+
+   {% block modals%}
+        {% if saved %}
+            {%include "partials/modal-cadastro.html"%}
+        {% endif %}
+    {% endblock modals%}

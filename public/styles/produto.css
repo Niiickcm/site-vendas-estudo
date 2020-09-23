@@ -1,0 +1,13 @@
+.informacao-produto .produtos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 10px;
+}
+
+.informacao-produto .produtos .container-produto{
+    background-color: blue;
+}
+
+.informacao-produto .conteudo-grid{
+    margin-top: 0;
+}
